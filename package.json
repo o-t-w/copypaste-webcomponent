@@ -1,7 +1,7 @@
 {
   "name": "copypaste-webcomponent",
   "version": "1.0.1",
-  "description": "A web component for copy and pasting text",
+  "description": "A web component to copy text",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
