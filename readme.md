@@ -1,6 +1,6 @@
 __Dependency-free custom element with shadow DOM. Specify text as a property that a user can then copy to the clipboard.__
 
-##Usage
+## Usage
 
 - type `npm install copypaste-webcomponent` in your terminal
 - import the module
