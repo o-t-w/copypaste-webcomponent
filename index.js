@@ -21,8 +21,9 @@ let copyPasteTemplate = document.createElement('template');
     font-family: inherit;
 	border: 0;
 	border-radius: 5px;
-    background-color: rgb(245,245,245);
-    color: rgb(40,40,40);
+	background-color: rgb(245,245,245);
+	color: rgb(40,40,40);
+	box-shadow: 0 1px 3px 0px rgba(0,0,0,0.2);
     font-size: 15px;
     text-align: center;
     display: flex;
@@ -44,8 +45,7 @@ let copyPasteTemplate = document.createElement('template');
   }
 
   button:active {
-    background-color: #3dd28d;
-    color: rgb(250,250,250);
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.2);
 }
 
   svg {
@@ -161,3 +161,5 @@ let copyPasteTemplate = document.createElement('template');
 		}
 
 window.customElements.define('copy-paste', CopyPaste);
+
+export default CopyPaste;

@@ -14,5 +14,5 @@ __Dependency-free custom element with shadow DOM. Specify text as a property tha
 - Be sure to specify some text as an attribute! e.g.
 
 ```
-`<copy-paste text="lorem ipsum"></copy-paste>`
+<copy-paste text="lorem ipsum"></copy-paste>
 ```
