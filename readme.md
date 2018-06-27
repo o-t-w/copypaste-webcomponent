@@ -11,8 +11,8 @@ __Dependency-free custom element with shadow DOM. Specify text as a property tha
 	</script>
 	```
 - plop the `<copy-paste></copy-paste>` component in your markup wherever you want it to appear!
-- Be sure to specify some text as an attribute! e.g.
+- The text can be whatever you want! e.g.
 
 ```
-<copy-paste text="lorem ipsum"></copy-paste>
+<copy-paste>lorem ipsum</copy-paste>
 ```

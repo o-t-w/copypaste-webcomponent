@@ -1,6 +1,6 @@
 {
   "name": "copypaste-webcomponent",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A web component to copy text",
   "main": "index.js",
   "scripts": {
@@ -12,14 +12,11 @@
   },
   "homepage": "https://github.com/o-t-w/copypaste-webcomponent",
   "keywords": [
-    "copy",
-    "paste",
-    "custom",
-    "element",
-    "shadow",
-    "DOM",
-    "web",
-    "component"
+	"copy",
+	"clipboard",
+    "custom element",
+    "shadow DOM",
+    "web component"
   ],
   "author": "ollie-w",
   "license": "ISC",

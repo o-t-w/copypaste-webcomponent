@@ -91,7 +91,7 @@ let copyPasteTemplate = document.createElement('template');
   </style>
 	
 	<div class="copypaste">
-            <span spellcheck="false" contenteditable="true"></span>
+            <span spellcheck="false" contenteditable="true"><slot></slot></span>
             <button>Copy <?xml version="1.0" encoding="UTF-8" standalone="no"?>
               <svg class="opacity0" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <title>iconography/status-complete</title>
@@ -108,23 +108,6 @@ let copyPasteTemplate = document.createElement('template');
 
 	class CopyPaste extends HTMLElement {
 
-		static get observedAttributes() {
-			return ['text'];
-		}
-		get text() {
-			return this.getAttribute('text');
-		}
-
-		set text(newValue) {
-			this.setAttribute('text', newValue);
-		}
-
-		attributeChangedCallback(name, oldValue, newValue) {
-			if (name === 'text') {
-					this.shadowRoot.querySelector('span').textContent = newValue;
-			}
-		}
-
 		constructor() {
 			super();
 			let shadowRoot = this.attachShadow({mode: 'open'});
@@ -133,9 +116,12 @@ let copyPasteTemplate = document.createElement('template');
 
 		connectedCallback() {
 			let copyButton = this.shadowRoot.querySelector('button');
-			let textToCopy = this.shadowRoot.querySelector('span');
 			let svg = this.shadowRoot.querySelector('svg');
-			console.log(textToCopy)
+
+			var cp = document.querySelector('copy-paste')
+			var slot = cp.shadowRoot.querySelector('slot');
+			var textToCopy = slot.assignedNodes()[0]
+			let span = this.shadowRoot.querySelector('span');
 
 			function selectElementContents(el) {
     		var range = document.createRange();
@@ -155,7 +141,7 @@ let copyPasteTemplate = document.createElement('template');
 		}
 
 			copyButton.addEventListener('click', copyText);
-			textToCopy.addEventListener('click', copyText);
+			span.addEventListener('click', copyText);
 
 		}	
 		}
